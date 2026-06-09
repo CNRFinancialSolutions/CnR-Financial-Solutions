@@ -10,10 +10,14 @@
 <body class="bg-slate-50 text-slate-800 font-sans scroll-smooth">
 
     <header class="bg-white shadow-xs sticky top-0 z-50 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition flex items-center gap-2">
-                <i class="fa-solid fa-arrow-left"></i> Back to Removal Site
-            </a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-sm font-semibold text-slate-500 hover:text-blue-600 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrow-left"></i> <span class="hidden sm:inline">Back</span>
+                </a>
+                <span class="text-slate-200 hidden sm:inline">|</span>
+                <img src="logo.png" alt="C & R Financial Solutions Logo" class="h-14 w-auto object-contain">
+            </div>
             <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
                 <a href="#benefits" class="hover:text-blue-600 transition">Benefits</a>
                 <a href="#how-it-works" class="hover:text-blue-600 transition">How It Works</a>
@@ -42,7 +46,7 @@
             </p>
         </div>
 
-        <section id="benefits" class="mb-16 scroll-mt-20">
+        <section id="benefits" class="mb-16 scroll-mt-24">
             <div class="border-l-4 border-blue-600 pl-4 mb-8">
                 <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Core Benefits of Debt Counselling</h2>
                 <p class="text-slate-500 text-sm">How this legal protection model stabilizes your wallet immediately.</p>
@@ -80,7 +84,7 @@
             </div>
         </section>
 
-        <section id="how-it-works" class="mb-16 scroll-mt-20">
+        <section id="how-it-works" class="mb-16 scroll-mt-24">
             <div class="border-l-4 border-blue-600 pl-4 mb-8">
                 <h2 class="text-2xl font-bold text-slate-900 tracking-tight">How the Process Works</h2>
                 <p class="text-slate-500 text-sm">Step-by-step overview of your operational application journey.</p>
@@ -138,8 +142,9 @@
         </div>
     </main>
 
-    <footer class="text-center py-12 text-xs text-slate-400 border-t border-slate-200 mt-12 bg-white">
-        C & R Financial Solutions • Licensed Debt Counsellor Registration Number NCRDC 4166
+    <footer class="text-center py-12 text-xs text-slate-400 border-t border-slate-200 mt-12 bg-white flex flex-col sm:flex-row items-center justify-center gap-4">
+        <img src="logo.png" alt="C & R Logo Footer Minimal" class="h-8 w-auto opacity-40 grayscale">
+        <span>C & R Financial Solutions • Licensed Debt Counsellor Registration Number NCRDC 4166</span>
     </footer>
 
 </body>
