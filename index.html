@@ -92,31 +92,31 @@
                 <p class="text-slate-400 mt-2">Fill in your details below. Your request will be directly emailed to our office.</p>
             </div>
             
-            <form id="debtRemovalForm" onsubmit="return false;" class="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10">
+            <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-medium text-slate-300 mb-2">Your Full Name</label>
-                        <input type="text" id="fullName" name="name" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                        <input type="text" id="fullName" name="Name" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate-300 mb-2">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                        <input type="tel" id="phone" name="Phone" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
                     </div>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-slate-300 mb-2">ID Number (For Verification Check)</label>
-                    <input type="text" id="idNumber" name="id_number" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                    <input type="text" id="idNumber" name="ID Number" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-slate-300 mb-2">Message / Details regarding your status</label>
-                    <textarea id="status" name="message" rows="4" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition"></textarea>
+                    <textarea id="status" name="Message" rows="4" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition"></textarea>
                 </div>
                 
                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition shadow-md cursor-pointer">
                     Submit Secure Request
                 </button>
             </form>
-        </div>
+            </div>
     </section>
 
     <footer class="bg-slate-950 text-slate-500 text-sm py-12 border-t border-slate-900">
@@ -136,36 +136,5 @@
         </div>
     </footer>
 
-  <script>
-    document.getElementById('debtRemovalForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        const fullName = document.getElementById('fullName').value;
-        const phone = document.getElementById('phone').value;
-        const idNumber = document.getElementById('idNumber').value;
-        const status = document.getElementById('status').value;
-
-        const u = "Riaan";
-        const d = "cnrfinancialservices.co.za";
-        const r = u + "@" + d;
-
-        const subject = encodeURIComponent("New Debt Review Removal Lead - " + fullName);
-        
-        const emailBody = encodeURIComponent(
-            "Hello Riaan,\n\n" +
-            "You have received a new website inquiry for Debt Review Removal from C & R Financial Solutions:\n\n" +
-            "----------------------------------------\n" +
-            "Client Name: " + fullName + "\n" +
-            "Phone Number: " + phone + "\n" +
-            "ID Number: " + idNumber + "\n" +
-            "Status / Details: " + status + "\n" +
-            "----------------------------------------\n\n" +
-            "Please contact this client to process their free assessment."
-        );
-
-        window.location.href = "mailto:" + r + "?subject=" + subject + "&body=" + emailBody;
-    });
-    </script>
 </body>
 </html>
