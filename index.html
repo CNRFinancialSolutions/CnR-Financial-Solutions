@@ -136,6 +136,36 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+  <script>
+    document.getElementById('debtRemovalForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const fullName = document.getElementById('fullName').value;
+        const phone = document.getElementById('phone').value;
+        const idNumber = document.getElementById('idNumber').value;
+        const status = document.getElementById('status').value;
+
+        const u = "Riaan";
+        const d = "cnrfinancialservices.co.za";
+        const r = u + "@" + d;
+
+        const subject = encodeURIComponent("New Debt Review Removal Lead - " + fullName);
+        
+        const emailBody = encodeURIComponent(
+            "Hello Riaan,\n\n" +
+            "You have received a new website inquiry for Debt Review Removal from C & R Financial Solutions:\n\n" +
+            "----------------------------------------\n" +
+            "Client Name: " + fullName + "\n" +
+            "Phone Number: " + phone + "\n" +
+            "ID Number: " + idNumber + "\n" +
+            "Status / Details: " + status + "\n" +
+            "----------------------------------------\n\n" +
+            "Please contact this client to process their free assessment."
+        );
+
+        window.location.href = "mailto:" + r + "?subject=" + subject + "&body=" + emailBody;
+    });
+    </script>
 </body>
 </html>
