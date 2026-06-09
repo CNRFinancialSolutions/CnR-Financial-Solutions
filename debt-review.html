@@ -4,64 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debt Counselling Services | C & R Financial Solutions</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans">
+<body class="bg-slate-50 text-slate-800 font-sans scroll-smooth">
 
-    <!-- Simple Back Navigation Header -->
-    <header class="bg-white shadow-xs border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">
-                ← Back to Home
+    <header class="bg-white shadow-xs sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Back to Removal Site
             </a>
-            <span class="text-xs font-mono text-slate-400">NCR Status: Active</span>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="#benefits" class="hover:text-blue-600 transition">Benefits</a>
+                <a href="#how-it-works" class="hover:text-blue-600 transition">How It Works</a>
+            </nav>
+            <div class="bg-slate-100 px-3 py-1 rounded-md text-xs font-mono font-bold text-slate-700 border border-slate-200">
+                NCRDC 4166
+            </div>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="max-w-4xl mx-auto px-4 py-16">
-        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xs border border-slate-100">
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xs border border-slate-100 mb-12">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-100 pb-6 mb-8 gap-4">
                 <div>
                     <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Registered Debt Counselling</h1>
-                    <p class="text-slate-500 mt-1">National Credit Act structured restructuring options.</p>
+                    <p class="text-slate-500 mt-1">Regulated relief frameworks under the National Credit Act.</p>
                 </div>
-                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-center min-w-[180px]">
-                    <span class="block text-xs uppercase font-bold text-slate-400 tracking-wider">NCR Registration</span>
+                <div class="bg-blue-50 p-3 rounded-xl border border-blue-100 text-center min-w-[180px]">
+                    <span class="block text-xs uppercase font-bold text-blue-500 tracking-wider">NCR Registration</span>
                     <span class="text-md font-mono font-bold text-slate-900">NCRDC 4166</span>
                 </div>
             </div>
 
-            <p class="text-lg leading-relaxed text-slate-600 mb-6">
-                If you are struggling to keep up with your monthly debt commitments, a standard structured debt review offers a legal process to consolidate your accounts, negotiate reduced interest rates, and secure absolute asset protection under South African law.
+            <p class="text-lg leading-relaxed text-slate-600">
+                If you are struggling to keep up with your monthly debt commitments, a standard structured debt review offers a legal process to protect your livelihood, slash interest rates, and build a sustainable route back to clear financial standing.
             </p>
+        </div>
 
-            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">What Our Restructuring Offers:</h2>
-            <ul class="space-y-3 text-slate-600 list-inside list-disc pl-2 mb-10">
-                <li>Legal protection against account asset repossessions and foreclosures.</li>
-                <li>Consolidation of multiple loan repayments into one affordable monthly installment.</li>
-                <li>Restructured payment intervals aligned with your actual essential living budget.</li>
-            </ul>
-
-            <!-- Direct Contact Hook -->
-            <div class="bg-slate-900 rounded-xl p-8 text-white flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <h3 class="text-lg font-bold">Need help restructuring your active debts?</h3>
-                    <p class="text-slate-400 text-sm mt-1">Connect with our support team instantly over encrypted WhatsApp link.</p>
-                </div>
-                <a href="https://wa.me/27767145104?text=Hi,%20I'm%20inquiring%20about%20structuring%20a%20new%20Debt%20Review%20plan." 
-                   target="_blank" 
-                   class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-lg text-center whitespace-nowrap transition flex items-center gap-2">
-                    <i class="fab fa-whatsapp"></i> Chat Safely Now
-                </a>
+        <section id="benefits" class="mb-16 scroll-mt-20">
+            <div class="border-l-4 border-blue-600 pl-4 mb-8">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Core Benefits of Debt Counselling</h2>
+                <p class="text-slate-500 text-sm">How this legal protection model stabilizes your wallet immediately.</p>
             </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-2xs flex gap-4">
+                    <div class="text-blue-600 mt-1"><i class="fa-solid fa-shield-halved text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Absolute Asset Protection</h3>
+                        <p class="text-slate-600 text-sm">Credit providers cannot repossess your vehicle or foreclose on your home once your application process transitions active.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-2xs flex gap-4">
+                    <div class="text-blue-600 mt-1"><i class="fa-solid fa-percent text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Slashed Interest Rates</h3>
+                        <p class="text-slate-600 text-sm">We legally negotiate down hefty compound interest parameters, sometimes all the way down to 0% depending on constraints.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-2xs flex gap-4">
+                    <div class="text-blue-600 mt-1"><i class="fa-solid fa-wallet text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">One Single Consolidated Payment</h3>
+                        <p class="text-slate-600 text-sm">No more managing dozens of debit orders. You make a single monthly payment to an independent, regulated Payment Distribution Agency.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-2xs flex gap-4">
+                    <div class="text-blue-600 mt-1"><i class="fa-solid fa-ban text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">No More Harassment</h3>
+                        <p class="text-slate-600 text-sm">All collection agencies and legal letters stop coming directly to you. They are required by law to talk exclusively to us.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="mb-16 scroll-mt-20">
+            <div class="border-l-4 border-blue-600 pl-4 mb-8">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">How the Process Works</h2>
+                <p class="text-slate-500 text-sm">Step-by-step overview of your operational application journey.</p>
+            </div>
+
+            <div class="bg-white rounded-xl border border-slate-100 shadow-2xs p-8 relative overflow-hidden">
+                <div class="space-y-8 relative before:absolute before:inset-0 before:right-auto before:left-4 before:w-0.5 before:bg-slate-200">
+                    
+                    <div class="relative flex items-start pl-10 gap-2">
+                        <div class="absolute left-1.5 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shadow-xs">1</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Step 1: Confidential Evaluation</h4>
+                            <p class="text-slate-600 text-sm mt-1">We balance your aggregate gross monthly salary against absolute base survival distributions to confirm over-indebted status parameters accurately.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-start pl-10 gap-2">
+                        <div class="absolute left-1.5 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shadow-xs">2</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Step 2: Formal Declaration (Form 16)</h4>
+                            <p class="text-slate-600 text-sm mt-1">Upon signing, we register you onto the official NCR database system. This instantly initiates tracking locks preventing lenders from pursuing negative execution judgments.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-start pl-10 gap-2">
+                        <div class="absolute left-1.5 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shadow-xs">3</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Step 3: Restructured Negotiation</h4>
+                            <p class="text-slate-600 text-sm mt-1">Our offices negotiate directly with your banks and credit providers to establish a reduced payment baseline framework acceptable to your specific living budget limits.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-start pl-10 gap-2">
+                        <div class="absolute left-1.5 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shadow-xs">4</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Step 4: Court Order & Clearance Target</h4>
+                            <p class="text-slate-600 text-sm mt-1">The new repayment configuration plan is made into a formal court order. You pay your single monthly premium cleanly until your balances clear down to eligible removal status.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-slate-900 rounded-xl p-8 text-white flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <h3 class="text-lg font-bold">Need help restructuring your active debts?</h3>
+                <p class="text-slate-400 text-sm mt-1">Connect with our support team instantly over encrypted WhatsApp link.</p>
+            </div>
+            <a href="https://wa.me/27767145104?text=Hi,%20I'm%20inquiring%20about%20structuring%20a%20new%20Debt%20Review%20plan." 
+               target="_blank" 
+               class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-lg text-center whitespace-nowrap transition flex items-center gap-2">
+                <i class="fab fa-whatsapp"></i> Chat Safely Now
+            </a>
         </div>
     </main>
 
-    <footer class="text-center py-12 text-xs text-slate-400">
+    <footer class="text-center py-12 text-xs text-slate-400 border-t border-slate-200 mt-12 bg-white">
         C & R Financial Solutions • Licensed Debt Counsellor Registration Number NCRDC 4166
     </footer>
 
