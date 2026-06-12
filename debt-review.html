@@ -129,7 +129,7 @@
             </div>
         </section>
 
-        <div class="bg-slate-900 rounded-xl p-8 text-white flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="bg-slate-900 rounded-xl p-8 text-white flex flex-col md:flex-row justify-between items-center gap-6 mb-16">
             <div>
                 <h3 class="text-lg font-bold">Need help restructuring your active debts?</h3>
                 <p class="text-slate-400 text-sm mt-1">Connect with our support team instantly over encrypted WhatsApp link.</p>
@@ -140,12 +140,24 @@
                 <i class="fab fa-whatsapp"></i> Chat Safely Now
             </a>
         </div>
-    </main>
 
-    <footer class="text-center py-12 text-xs text-slate-400 border-t border-slate-200 mt-12 bg-white flex flex-col sm:flex-row items-center justify-center gap-4">
-        <img src="logo.png" alt="C & R Logo Footer Minimal" class="h-16 w-auto opacity-40 grayscale">
-        <span>C & R Financial Solutions • Licensed Debt Counsellor Registration Number NCRDC 4166</span>
-    </footer>
+        <section id="contact" class="bg-slate-900 text-white p-8 md:p-12 rounded-2xl border border-white/10 shadow-lg">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Request Financial Clearance</h2>
+                <p class="text-slate-400 mt-2">Fill in your details below. Your request will be processed directly by our team.</p>
+            </div>
+            
+            <form action="YOUR_FORMINIT_ENDPOINT_HERE" method="POST" enctype="multipart/form-data" class="space-y-6 bg-white/5 p-6 md:p-8 rounded-xl border border-white/10">
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Your Full Name</label>
+                    <input type="text" id="fullName" name="Name" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                </div>
 
-</body>
-</html>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="Phone" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+                        <input type="email" id="email" name="Email" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue
