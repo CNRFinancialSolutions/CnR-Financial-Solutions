@@ -93,52 +93,53 @@
             </div>
             
             <form action="https://forminit.com/f/exzkdjpgn0d" method="POST" enctype="multipart/form-data" class="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10">
+                
                 <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">Your Full Name</label>
-                    <input type="text" id="fullName" name="Name" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                    <label for="fullName" class="block text-sm font-medium text-slate-300 mb-2">Your Full Name</label>
+                    <input type="text" id="fullName" name="name" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Phone Number</label>
-                        <input type="tel" id="phone" name="Phone" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                        <label for="phone" class="block text-sm font-medium text-slate-300 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
-                        <input type="email" id="email" name="Email" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                        <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">Select Identification Type</label>
-                    <select id="idType" name="ID Type" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                    <label for="idType" class="block text-sm font-medium text-slate-300 mb-2">Select Identification Type</label>
+                    <select id="idType" name="id_type" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
                         <option value="" disabled selected>-- Choose ID Type --</option>
                         <option value="book">ID Book</option>
                         <option value="card">Smart ID Card</option>
                     </select>
                 </div>
 
-              <div id="idBookUpload" class="hidden">
-    <label class="block text-sm font-medium text-slate-300 mb-2">Upload or Take Photo of ID Book (.jpeg, .jpg, .png)</label>
-    <input type="file" id="idBookFile" name="id_book" accept="image/jpeg, image/png" capture="environment" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-400 focus:outline-none focus:border-blue-500 transition file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
-</div>
+                <div id="idBookUpload" class="hidden">
+                    <label for="idBookFile" class="block text-sm font-medium text-slate-300 mb-2">Upload or Take Photo of ID Book (.jpeg, .jpg, .png)</label>
+                    <input type="file" id="idBookFile" name="id_book" accept="image/jpeg, image/png" capture="environment" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-400 focus:outline-none focus:border-blue-500 transition file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
+                </div>
 
-<div id="idCardUpload" class="hidden space-y-4">
-    <div class="grid md:grid-cols-2 gap-6">
-        <div>
-            <label class="block text-sm font-medium text-slate-300 mb-2">ID Card - Front (Take Photo)</label>
-            <input type="file" id="idCardFront" name="id_card_front" accept="image/jpeg, image/png" capture="environment" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-400 focus:outline-none focus:border-blue-500 transition file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
-        </div>
-        <div>
-            <label class="block text-sm font-medium text-slate-300 mb-2">ID Card - Back (Take Photo)</label>
-            <input type="file" id="idCardBack" name="id_card_back" accept="image/jpeg, image/png" capture="environment" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-400 focus:outline-none focus:border-blue-500 transition file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
-        </div>
-    </div>
-</div>
+                <div id="idCardUpload" class="hidden space-y-4">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="idCardFront" class="block text-sm font-medium text-slate-300 mb-2">ID Card - Front (Take Photo)</label>
+                            <input type="file" id="idCardFront" name="id_card_front" accept="image/jpeg, image/png" capture="environment" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-400 focus:outline-none focus:border-blue-500 transition file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
+                        </div>
+                        <div>
+                            <label for="idCardBack" class="block text-sm font-medium text-slate-300 mb-2">ID Card - Back (Take Photo)</label>
+                            <input type="file" id="idCardBack" name="id_card_back" accept="image/jpeg, image/png" capture="environment" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-400 focus:outline-none focus:border-blue-500 transition file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
+                        </div>
+                    </div>
+                </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">Message / Details regarding your status</label>
-                    <textarea id="status" name="Message" rows="4" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition"></textarea>
+                    <label for="status" class="block text-sm font-medium text-slate-300 mb-2">Message / Details regarding your status</label>
+                    <textarea id="status" name="message" rows="4" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition"></textarea>
                 </div>
                 
                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition shadow-md cursor-pointer">
