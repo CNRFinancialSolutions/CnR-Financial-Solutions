@@ -160,4 +160,90 @@
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
-                        <input type="email" id="email" name="Email" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue
+                        <input type="email" id="email" name="Email" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Select Identification Type</label>
+                    <select id="idType" name="ID_Type" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                        <option value="" disabled selected>-- Choose ID Type --</option>
+                        <option value="book">ID Book</option>
+                        <option value="card">Smart ID Card</option>
+                    </select>
+                </div>
+
+                <div id="idBookUpload" class="hidden">
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Upload ID Book Image (.jpeg, .jpg, .png)</label>
+                    <input type="file" id="idBookFile" name="id_book" accept=".jpeg, .jpg, .png" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-400 focus:outline-none focus:border-blue-500 transition file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
+                </div>
+
+                <div id="idCardUpload" class="hidden space-y-4">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">ID Card - Front (.jpeg, .jpg, .png)</label>
+                            <input type="file" id="idCardFront" name="id_card_front" accept=".jpeg, .jpg, .png" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-400 focus:outline-none focus:border-blue-500 transition file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">ID Card - Back (.jpeg, .jpg, .png)</label>
+                            <input type="file" id="idCardBack" name="id_card_back" accept=".jpeg, .jpg, .png" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-slate-400 focus:outline-none focus:border-blue-500 transition file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Message / Details regarding your status</label>
+                    <textarea id="status" name="Message" rows="4" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition"></textarea>
+                </div>
+                
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition shadow-md cursor-pointer block text-center">
+                        Submit Secure Request
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="text-center py-12 text-xs text-slate-400 border-t border-slate-200 mt-12 bg-white flex flex-col sm:flex-row items-center justify-center gap-4">
+        <img src="logo.png" alt="C & R Logo Footer Minimal" class="h-16 w-auto opacity-40 grayscale">
+        <span>C & R Financial Solutions • Licensed Debt Counsellor Registration Number NCRDC 4166</span>
+    </footer>
+
+    <script>
+        const idTypeSelect = document.getElementById('idType');
+        const idBookUpload = document.getElementById('idBookUpload');
+        const idCardUpload = document.getElementById('idCardUpload');
+        
+        const idBookFile = document.getElementById('idBookFile');
+        const idCardFront = document.getElementById('idCardFront');
+        const idCardBack = document.getElementById('idCardBack');
+
+        idTypeSelect.addEventListener('change', function() {
+            if (this.value === 'book') {
+                idBookUpload.style.display = 'block';
+                idCardUpload.style.display = 'none';
+                
+                idBookFile.required = true;
+                idCardFront.required = false;
+                idCardBack.required = false;
+            } else if (this.value === 'card') {
+                idCardUpload.style.display = 'block';
+                idBookUpload.style.display = 'none';
+                
+                idBookFile.required = false;
+                idCardFront.required = true;
+                idCardBack.required = true;
+            } else {
+                idBookUpload.style.display = 'none';
+                idCardUpload.style.display = 'none';
+                
+                idBookFile.required = false;
+                idCardFront.required = false;
+                idCardBack.required = false;
+            }
+        });
+    </script>
+
+</body>
+</html>
